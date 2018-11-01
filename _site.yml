@@ -1,7 +1,8 @@
-name: "Yay internet!"
+name: "personal website"
 output_dir: "."
 navbar:
   title: "Home"
+  icon: fa-home
   right:
     - text: "About"
       href: about.html

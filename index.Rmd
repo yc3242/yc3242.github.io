@@ -1,7 +1,8 @@
 ---
-title: "Holy cow!"
+title: "Youn Kyeong Chang"
 ---
 
-### I have a webpage!
+### Department of Biostatistics 
+### Columbia University Mailman School of Public Health
 
 And I can put all kinds of stuff on it!

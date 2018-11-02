@@ -17,6 +17,4 @@ navbar:
       href: http://github.com/yc3242/
 output:
   html_document:
-    toc: true
-    toc_float: true
     theme: flatly

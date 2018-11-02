@@ -29,49 +29,57 @@ ny_noaa =
          tmin = as.numeric(tmin) / 10)
 ```
 
-{data-width=650}
+Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Minimum and Maximum temperature in 2009
+### Minimum and Maximum temperature mapping snowfall in 2009
 
 ```{r}
 xlab = list(title = "Minimum temperature(°C)")
 ylab = list(title = "Maximum temperature(°C)")
 
-ny_noaa %>%
+ny_noaa %>% 
   filter(year == 2009,
-         month %in% c("January", "April", "July", "October"),
          !is.na(tmax),
-         !is.na(tmin)) %>%
+         !is.na(tmin),
+         !is.na(snow),
+         snow > 0, snow < 100) %>%
   plot_ly(x = ~tmin, y = ~tmax, type = "scatter", mode = "markers",
           alpha = 0.5,
-          color = ~ month) %>% 
+          color = ~snow) %>% 
   layout(xaxis = xlab, yaxis = ylab)
 ```
 
-{data-width=350}
+Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Maximum temperature by month in 2009
 
 ```{r}
-ylab = list(
-  title = "Hour of the day"
-)
+xlab = list(title = "Month")
+ylab = list(title = "Maximum temperature(°C)")
 
-order_per_id = 
-instacart %>% 
-  count(user_id)
-
-inner_join(instacart, order_per_id, by = "order_dow") %>% 
-  plot_ly(y = ~n, 
-          color = ~order_dow, type = "box", colors = "Set2") %>% 
-  layout(yaxis = ylab)
+ny_noaa %>% 
+  filter(year == 2009,
+         !is.na(tmax),
+         !is.na(tmin),
+         !is.na(prcp)) %>% 
+  plot_ly(x = ~month, y = ~tmax, color = ~month, type = "box") %>% 
+  layout(xaxis = xlab, yaxis = ylab)
 ```
 
-### Chart C
+### Precipitation by month in 2009
 
 ```{r}
+xlab = list(title = "Month")
+ylab = list(title = "Precipitation(mm)")
 
+ny_noaa %>% 
+  filter(year == 2009,
+         !is.na(tmax),
+         !is.na(tmin),
+         !is.na(prcp)) %>% 
+  plot_ly(x = ~month, y = ~prcp, color = ~month, type = "bar") %>% 
+  layout(xaxis = xlab, yaxis = ylab)
 ```
 

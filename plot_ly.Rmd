@@ -26,10 +26,11 @@ ny_noaa =
          day = as.integer(day),
          prcp = prcp / 10,
          tmax = as.numeric(tmax) / 10,
-         tmin = as.numeric(tmin) / 10)
+         tmin = as.numeric(tmin) / 10) %>% 
+  sample_n(50000)
 ```
 
-Column {data-width=650}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Minimum and Maximum temperature mapping snowfall in 2009
@@ -42,15 +43,15 @@ ny_noaa %>%
   filter(year == 2009,
          !is.na(tmax),
          !is.na(tmin),
-         !is.na(snow),
-         snow > 0, snow < 100) %>%
+         !is.na(prcp),
+         prcp > 0) %>%
   plot_ly(x = ~tmin, y = ~tmax, type = "scatter", mode = "markers",
           alpha = 0.5,
-          color = ~snow) %>% 
+          color = ~ prcp) %>% 
   layout(xaxis = xlab, yaxis = ylab)
 ```
 
-Column {data-width=350}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
 ### Maximum temperature by month in 2009
@@ -82,4 +83,5 @@ ny_noaa %>%
   plot_ly(x = ~month, y = ~prcp, color = ~month, type = "bar") %>% 
   layout(xaxis = xlab, yaxis = ylab)
 ```
+
 

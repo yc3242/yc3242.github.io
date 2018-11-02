@@ -33,7 +33,7 @@ ny_noaa =
 Column {data-width=450}
 -----------------------------------------------------------------------
 
-### Minimum and Maximum temperature mapping snowfall in 2009
+### Minimum and Maximum temperature mapping precipitation in 2009
 
 ```{r}
 xlab = list(title = "Minimum temperature(°C)")

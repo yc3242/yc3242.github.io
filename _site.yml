@@ -14,5 +14,4 @@ navbar:
     - icon: fa-github fa-lg
       href: http://github.com/yc3242/
 output:
-  html_document:
-  theme: flatly
+  html_document

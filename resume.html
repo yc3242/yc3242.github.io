@@ -19,9 +19,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -172,101 +169,6 @@ $(document).ready(function () {
 
 
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -317,19 +219,22 @@ div.tocify {
 </div>
 
 
+<p><br></p>
 <div id="education" class="section level2">
 <h2>Education</h2>
-<p><strong>Columbia University, Mailman School of Public Health</strong> Aug, 2016 - current M.S. Biostatistics (Theory and Methods track)</p>
-<p><strong>Seoul National University</strong> Mar, 2010 - Aug, 2012 M.S. Pharmacy Master’s thesis: Mechanism of Paclitaxel-Eluting Stents Thrombosis</p>
-<p><strong>Ewha Womans University</strong> Mar, 2006 - Feb, 2010 B.S. Pharmacy</p>
+<p><strong>Columbia University, Mailman School of Public Health</strong> Aug, 2016 - current, M.S. Biostatistics (Theory and Methods track)</p>
+<p><strong>Seoul National University</strong> Mar, 2010 - Aug, 2012, M.S. Pharmacy (Master’s thesis: Mechanism of Paclitaxel-Eluting Stents Thrombosis)</p>
+<p><strong>Ewha Womans University</strong> Mar, 2006 - Feb, 2010, B.S. Pharmacy</p>
+<p><br></p>
 </div>
 <div id="work-experience" class="section level2">
 <h2>Work Experience</h2>
-<p><strong>Pfizer</strong> Jun, 2013 - Nov, 2014 Regulatory Affairs associate</p>
-<p><strong>Merck &amp; Co.</strong> Oct, 2012 - Jun, 2013 Pharmacovigilance associate</p>
-<p><strong>Kangbuk Samsung Hospital</strong> Jul, 2009 Hospital pharmacy</p>
-<p><strong>Preventive pharmacy laboratory, Seoul National University</strong> Jul - Aug, 2009 Research Intern</p>
-<p><strong>Cell physiology pharmacy lab, Ewha Womans University</strong> Jul - Aug, 2008 Research Intern</p>
+<p><strong>Pfizer</strong> Jun, 2013 - Nov, 2014, Regulatory Affairs associate</p>
+<p><strong>Merck &amp; Co.</strong> Oct, 2012 - Jun, 2013, Pharmacovigilance associate</p>
+<p><strong>Kangbuk Samsung Hospital</strong> Jul, 2009, Hospital pharmacy</p>
+<p><strong>Preventive pharmacy laboratory, Seoul National University</strong> Jul - Aug, 2009, Research Intern</p>
+<p><strong>Cell physiology pharmacy lab, Ewha Womans University</strong> Jul - Aug, 2008, Research Intern</p>
+<p><br></p>
 </div>
 <div id="publications" class="section level2">
 <h2>Publications</h2>
@@ -341,8 +246,6 @@ div.tocify {
 
 
 
-</div>
-</div>
 
 </div>
 

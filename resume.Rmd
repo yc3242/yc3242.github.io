@@ -1,45 +1,49 @@
 ---
 output: html_document
-  toc: true
-  toc_float: true
 ---
+
+<br>
 
 ## Education
 
 **Columbia University, Mailman School of Public Health**
-Aug, 2016 - current
+Aug, 2016 - current,
 M.S. Biostatistics (Theory and Methods track)
 
 **Seoul National University**
-Mar, 2010 - Aug, 2012
+Mar, 2010 - Aug, 2012,
 M.S. Pharmacy
-Master's thesis: Mechanism of Paclitaxel-Eluting Stents Thrombosis
+(Master's thesis: Mechanism of Paclitaxel-Eluting Stents Thrombosis)
 
 **Ewha Womans University**
-Mar, 2006 - Feb, 2010
+Mar, 2006 - Feb, 2010,
 B.S. Pharmacy
+
+<br>
 
 ## Work Experience
 
 **Pfizer**
-Jun, 2013 - Nov, 2014
+Jun, 2013 - Nov, 2014,
 Regulatory Affairs associate
 
 **Merck & Co.**
-Oct, 2012 - Jun, 2013
+Oct, 2012 - Jun, 2013,
 Pharmacovigilance associate
 
 **Kangbuk Samsung Hospital**
-Jul, 2009
+Jul, 2009,
 Hospital pharmacy
 
 **Preventive pharmacy laboratory, Seoul National University**
-Jul - Aug, 2009
+Jul - Aug, 2009,
 Research Intern
 
 **Cell physiology pharmacy lab, Ewha Womans University**
-Jul - Aug, 2008
+Jul - Aug, 2008,
 Research Intern
+
+<br>
 
 ##Publications
 *	Jang WH, Lim KM, Kim K, Noh JY, Kang S, Chang YK, Chung JH. (2011) Low level of lead can induce phosphatidylserine exposure and erythrophagocytosis: a new mechanism underlying lead-associated anemia. Toxicol.Sci.122(1), 177–184

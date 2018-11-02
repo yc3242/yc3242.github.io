@@ -3,6 +3,9 @@ output_dir: "."
 navbar:
   title: "Home"
   icon: fa-home
+  left:
+    - text: "Plotly"
+      href: plot_ly.html
   right:
     - text: "CV"
       href: CV_yc3242.pdf
@@ -11,4 +14,5 @@ navbar:
     - icon: fa-github fa-lg
       href: http://github.com/yc3242/
 output:
-  html_document
+  html_document:
+  theme: flatly

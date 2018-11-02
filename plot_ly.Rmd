@@ -1,0 +1,77 @@
+---
+title: "Plot_ly"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+```
+
+```{r}
+library(p8105.datasets)
+data("ny_noaa") 
+```
+
+```{r}
+ny_noaa =
+  ny_noaa %>%
+  separate(date, into = c("year", "month", "day"), sep = "-") %>%
+  mutate(year = as.integer(year),
+         month = factor(month.name[as.integer(month)], levels = month.name),
+         day = as.integer(day),
+         prcp = prcp / 10,
+         tmax = as.numeric(tmax) / 10,
+         tmin = as.numeric(tmin) / 10)
+```
+
+{data-width=650}
+-----------------------------------------------------------------------
+
+### Minimum and Maximum temperature in 2009
+
+```{r}
+xlab = list(title = "Minimum temperature(°C)")
+ylab = list(title = "Maximum temperature(°C)")
+
+ny_noaa %>%
+  filter(year == 2009,
+         month %in% c("January", "April", "July", "October"),
+         !is.na(tmax),
+         !is.na(tmin)) %>%
+  plot_ly(x = ~tmin, y = ~tmax, type = "scatter", mode = "markers",
+          alpha = 0.5,
+          color = ~ month) %>% 
+  layout(xaxis = xlab, yaxis = ylab)
+```
+
+{data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+ylab = list(
+  title = "Hour of the day"
+)
+
+order_per_id = 
+instacart %>% 
+  count(user_id)
+
+inner_join(instacart, order_per_id, by = "order_dow") %>% 
+  plot_ly(y = ~n, 
+          color = ~order_dow, type = "box", colors = "Set2") %>% 
+  layout(yaxis = ylab)
+```
+
+### Chart C
+
+```{r}
+
+```
+
